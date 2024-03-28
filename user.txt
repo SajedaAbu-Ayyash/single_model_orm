@@ -1,0 +1,17 @@
+#Retrieve all the users
+all_users = User.objects.all()
+
+#Retrieve the last user
+last_user = User.objects.last()
+
+#To Retrieve first user
+first_user = User.objects.first()
+
+#Change the user with id=3 so their last name is Pancakes
+User.objects.filter(id=3).update(last_name= 'Pancakes')
+
+#Delete the user with id=2 from the database
+User.objects.filter(id=2).delete()
+
+#Get all the users, sorted by their first name
+all_users_first = User.objects.order_by('first_name')
